@@ -1,0 +1,311 @@
+/* ActivityTable.module.css */
+
+.wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* ── Table Header ──────────────────────── */
+.tableHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tableTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.tableSubtitle {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.filterBtn:hover {
+  background: var(--bg-hover);
+  border-color: rgba(148, 163, 184, 0.2);
+  color: var(--text-primary);
+}
+
+/* ── Scroll container ──────────────────── */
+.scrollContainer {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Table ─────────────────────────────── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.table thead th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.table thead th:first-child {
+  padding-left: 24px;
+}
+
+.table thead th:last-child {
+  padding-right: 24px;
+}
+
+/* ── Rows ──────────────────────────────── */
+.table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background var(--transition-fast);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.table tbody td {
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.table tbody td:first-child {
+  padding-left: 24px;
+}
+
+.table tbody td:last-child {
+  padding-right: 24px;
+}
+
+/* ── User cell ─────────────────────────── */
+.userCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-indigo-dark), var(--clr-violet));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.04em;
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+/* ── Activity text ─────────────────────── */
+.activityText {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-secondary);
+}
+
+/* ── Project badge ─────────────────────── */
+.projectBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--clr-indigo-light);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  white-space: nowrap;
+}
+
+/* ── Status badges ─────────────────────── */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status.completed {
+  background: var(--clr-emerald-glow);
+  color: var(--clr-emerald-light);
+}
+.status.completed::before { background: var(--clr-emerald-light); }
+
+.status.inprogress {
+  background: var(--clr-indigo-glow);
+  color: var(--clr-indigo-light);
+}
+.status.inprogress::before {
+  background: var(--clr-indigo-light);
+  animation: pulse 1.4s infinite;
+}
+
+.status.pending {
+  background: var(--clr-amber-glow);
+  color: var(--clr-amber-light);
+}
+.status.pending::before { background: var(--clr-amber-light); }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Date ──────────────────────────────── */
+.dateText {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+/* ── Actions ───────────────────────────── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.actionBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.actionBtn.delete:hover {
+  background: var(--clr-red-glow);
+  color: #f87171;
+}
+
+/* ── Empty state ───────────────────────── */
+.emptyState {
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  opacity: 0.4;
+}
+
+.emptyTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.emptyText {
+  font-size: 0.825rem;
+}
+
+/* ── Skeleton rows ─────────────────────── */
+.skeletonRow td {
+  padding: 14px 16px;
+}
+
+.skeletonRow td:first-child { padding-left: 24px; }
+
+.skelUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skelAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skelText {
+  height: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.skelBadge {
+  height: 24px;
+  border-radius: var(--radius-full);
+}

@@ -1,0 +1,110 @@
+{
+  "stats": [
+    {
+      "id": "users",
+      "title": "Total Users",
+      "value": "48,295",
+      "growth": 12.5,
+      "icon": "FiUsers",
+      "color": "indigo"
+    },
+    {
+      "id": "revenue",
+      "title": "Total Revenue",
+      "value": "$94,812",
+      "growth": 8.2,
+      "icon": "FiDollarSign",
+      "color": "emerald"
+    },
+    {
+      "id": "projects",
+      "title": "Active Projects",
+      "value": "183",
+      "growth": -3.1,
+      "icon": "FiBriefcase",
+      "color": "violet"
+    },
+    {
+      "id": "tasks",
+      "title": "Pending Tasks",
+      "value": "47",
+      "growth": 5.7,
+      "icon": "FiCheckSquare",
+      "color": "amber"
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "user": "Alice Johnson",
+      "avatar": "AJ",
+      "activity": "Deployed frontend build to production",
+      "project": "RedPhantom UI",
+      "status": "Completed",
+      "date": "2026-07-14"
+    },
+    {
+      "id": 2,
+      "user": "Bob Martinez",
+      "avatar": "BM",
+      "activity": "Updated API endpoint documentation",
+      "project": "Core API v3",
+      "status": "In Progress",
+      "date": "2026-07-14"
+    },
+    {
+      "id": 3,
+      "user": "Carol White",
+      "avatar": "CW",
+      "activity": "Reviewed and merged pull request #42",
+      "project": "Auth Service",
+      "status": "Completed",
+      "date": "2026-07-13"
+    },
+    {
+      "id": 4,
+      "user": "David Kim",
+      "avatar": "DK",
+      "activity": "Created database migration scripts",
+      "project": "Data Pipeline",
+      "status": "Pending",
+      "date": "2026-07-13"
+    },
+    {
+      "id": 5,
+      "user": "Eva Nguyen",
+      "avatar": "EN",
+      "activity": "Conducted user research interviews",
+      "project": "UX Research",
+      "status": "Completed",
+      "date": "2026-07-12"
+    },
+    {
+      "id": 6,
+      "user": "Frank Lee",
+      "avatar": "FL",
+      "activity": "Fixed critical authentication bug",
+      "project": "Auth Service",
+      "status": "Completed",
+      "date": "2026-07-12"
+    },
+    {
+      "id": 7,
+      "user": "Grace Chen",
+      "avatar": "GC",
+      "activity": "Designed new onboarding flow mockups",
+      "project": "RedPhantom UI",
+      "status": "In Progress",
+      "date": "2026-07-11"
+    },
+    {
+      "id": 8,
+      "user": "Henry Ford",
+      "avatar": "HF",
+      "activity": "Set up CI/CD pipeline for staging",
+      "project": "DevOps",
+      "status": "Pending",
+      "date": "2026-07-11"
+    }
+  ]
+}

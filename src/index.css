@@ -1,0 +1,188 @@
+/* =========================================================
+   Global CSS Variables & Design Tokens
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Background */
+  --bg-primary: #0f1117;
+  --bg-secondary: #161b27;
+  --bg-card: #1c2333;
+  --bg-hover: #232b3e;
+  --bg-sidebar: #111827;
+  --bg-navbar: rgba(22, 27, 39, 0.85);
+
+  /* Brand / Accent Colors */
+  --clr-indigo: #6366f1;
+  --clr-indigo-light: #818cf8;
+  --clr-indigo-dark: #4f46e5;
+  --clr-indigo-glow: rgba(99, 102, 241, 0.25);
+
+  --clr-emerald: #10b981;
+  --clr-emerald-light: #34d399;
+  --clr-emerald-glow: rgba(16, 185, 129, 0.2);
+
+  --clr-violet: #8b5cf6;
+  --clr-violet-light: #a78bfa;
+  --clr-violet-glow: rgba(139, 92, 246, 0.2);
+
+  --clr-amber: #f59e0b;
+  --clr-amber-light: #fbbf24;
+  --clr-amber-glow: rgba(245, 158, 11, 0.2);
+
+  --clr-red: #ef4444;
+  --clr-red-glow: rgba(239, 68, 68, 0.2);
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-inverse: #0f1117;
+
+  /* Border */
+  --border-color: rgba(148, 163, 184, 0.1);
+  --border-active: rgba(99, 102, 241, 0.5);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3);
+  --shadow-glow-indigo: 0 0 20px rgba(99, 102, 241, 0.3);
+
+  /* Sidebar */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-base: 0.25s ease-in-out;
+  --transition-slow: 0.4s ease-in-out;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+
+/* =========================================================
+   Reset & Base
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+img, svg {
+  display: block;
+}
+
+/* =========================================================
+   Scrollbar
+   ========================================================= */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* =========================================================
+   Utility: Focus Ring
+   ========================================================= */
+:focus-visible {
+  outline: 2px solid var(--clr-indigo);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* =========================================================
+   Loading Spinner
+   ========================================================= */
+.spinner-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.spinner {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--clr-indigo);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   Skeleton Loader
+   ========================================================= */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg-card) 25%,
+    var(--bg-hover) 50%,
+    var(--bg-card) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.8s infinite;
+  border-radius: var(--radius-md);
+}

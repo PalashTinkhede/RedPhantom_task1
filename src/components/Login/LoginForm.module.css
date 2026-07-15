@@ -1,0 +1,68 @@
+.form {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: var(--login-spacing-8);
+  text-align: left;
+}
+
+.title {
+  font-size: var(--login-font-2xl);
+  font-weight: 700;
+  color: var(--login-text-main);
+  margin-bottom: var(--login-spacing-2);
+}
+
+.subtitle {
+  font-size: var(--login-font-md);
+  color: var(--login-text-muted);
+}
+
+.apiError {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: var(--login-error-color);
+  padding: var(--login-spacing-3) var(--login-spacing-4);
+  border-radius: var(--login-radius-md);
+  margin-bottom: var(--login-spacing-6);
+  font-size: var(--login-font-sm);
+  text-align: center;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--login-spacing-6);
+  flex-wrap: wrap;
+  gap: var(--login-spacing-3);
+}
+
+.forgotPassword {
+  font-size: var(--login-font-sm);
+  font-weight: 500;
+  color: var(--login-brand-primary);
+}
+
+.forgotPassword:hover {
+  color: var(--login-brand-hover);
+}
+
+.signupText {
+  margin-top: var(--login-spacing-6);
+  text-align: center;
+  font-size: var(--login-font-sm);
+  color: var(--login-text-muted);
+}
+
+.signupText a {
+  font-weight: 600;
+  color: var(--login-brand-primary);
+}
+
+.signupText a:hover {
+  color: var(--login-brand-hover);
+}

@@ -1,0 +1,337 @@
+/* Navbar.module.css */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  background: var(--bg-navbar);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  gap: 16px;
+}
+
+/* ── Left side ─────────────────────────── */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.menuBtn {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.menuBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.pageTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+/* ── Search ────────────────────────────── */
+.searchWrapper {
+  flex: 1;
+  max-width: 420px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  padding: 0 16px 0 40px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.searchInput::placeholder {
+  color: var(--text-muted);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--clr-indigo);
+  box-shadow: 0 0 0 3px var(--clr-indigo-glow);
+}
+
+/* ── Right actions ─────────────────────── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.iconBtn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.iconBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.badge {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
+  background: var(--clr-indigo);
+  border-radius: 50%;
+  border: 2px solid var(--bg-navbar);
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-color);
+  margin: 0 4px;
+}
+
+/* ── User profile ──────────────────────── */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px 6px 6px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.profile:hover {
+  border-color: var(--border-active);
+  background: var(--bg-hover);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-indigo), var(--clr-violet));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.profileName {
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.profileRole {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.chevron {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+}
+
+
+.profileWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 240px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: 8px 0;
+  animation: slideDown 0.2s ease-out;
+  transform-origin: top right;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.dropdownHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 12px;
+}
+
+.dropdownAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-indigo), var(--clr-violet));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.dropdownName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dropdownEmail {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 4px 0;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.dropdownLogout {
+  color: #f87171;
+}
+
+.dropdownLogout:hover {
+  background: var(--clr-red-glow);
+  color: #ef4444;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 16px;
+  }
+
+  .menuBtn {
+    display: flex;
+  }
+
+  .searchWrapper {
+    display: none;
+  }
+
+  .profileInfo,
+  .chevron {
+    display: none;
+  }
+
+  .profile {
+    padding: 4px;
+    border: none;
+    background: transparent;
+  }
+
+  .profile:hover {
+    background: var(--bg-hover);
+  }
+
+  .pageTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .searchWrapper {
+    max-width: 280px;
+  }
+
+  .profileInfo {
+    display: none;
+  }
+}

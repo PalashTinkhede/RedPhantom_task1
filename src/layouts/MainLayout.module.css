@@ -1,0 +1,44 @@
+/* MainLayout.module.css */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ── Content area ──────────────────────── */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin-left: var(--sidebar-width);
+  transition: margin-left var(--transition-base);
+  min-width: 0; /* prevent overflow */
+}
+
+.content.collapsed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 28px 40px;
+}
+
+/* ── Responsive ────────────────────────── */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0 !important;
+  }
+
+  .main {
+    padding: 20px 16px 32px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content {
+    margin-left: var(--sidebar-collapsed-width);
+  }
+}

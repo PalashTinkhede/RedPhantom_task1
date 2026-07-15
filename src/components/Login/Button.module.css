@@ -1,0 +1,62 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--login-spacing-2);
+  width: 100%;
+  padding: var(--login-spacing-3) var(--login-spacing-4);
+  font-size: var(--login-font-base);
+  font-weight: 500;
+  border: none;
+  border-radius: var(--login-radius-md);
+  transition: all 0.2s ease;
+  outline: none;
+  height: 44px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px var(--login-focus-ring);
+}
+
+.primary {
+  background-color: var(--login-brand-primary);
+  color: white;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: var(--login-brand-hover);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--login-brand-primary);
+  border: 1px solid var(--login-border-color);
+}
+
+.secondary:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading {
+  pointer-events: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

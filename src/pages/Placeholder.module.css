@@ -1,0 +1,49 @@
+/* Shared placeholder page styles */
+.placeholderPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 16px;
+  color: var(--text-muted);
+  text-align: center;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.placeholderIcon {
+  font-size: 3.5rem;
+  opacity: 0.3;
+}
+
+.placeholderTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: -0.02em;
+}
+
+.placeholderText {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 360px;
+}
+
+.comingSoonBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--clr-indigo-glow);
+  color: var(--clr-indigo-light);
+  border: 1px solid rgba(99,102,241,0.25);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,141 @@
+/* LoginPage.module.css */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--login-bg-main);
+}
+
+.brandPanel {
+  display: none;
+  width: 50%;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.brandContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--login-spacing-12);
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--login-spacing-3);
+  margin-bottom: auto;
+}
+
+.mobileLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--login-spacing-2);
+  margin-bottom: var(--login-spacing-8);
+  justify-content: center;
+}
+
+.logoIcon {
+  color: var(--login-brand-primary);
+}
+
+.logoText {
+  font-size: var(--login-font-xl);
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.illustrationWrapper {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.glassCard {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--login-spacing-8);
+  border-radius: var(--login-radius-xl);
+  max-width: 480px;
+  position: relative;
+  overflow: hidden;
+}
+
+.glowOrb1 {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: var(--login-brand-primary);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.glowOrb2 {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: #8b5cf6;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.glassCard h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: var(--login-spacing-4);
+  color: white;
+  line-height: 1.2;
+}
+
+.glassCard p {
+  font-size: var(--login-font-base);
+  color: var(--login-text-muted);
+  line-height: 1.6;
+}
+
+.formPanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--login-spacing-8) var(--login-spacing-6);
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+  .formPanel {
+    padding: var(--login-spacing-12);
+  }
+}
+
+@media (min-width: 1024px) {
+  .brandPanel {
+    display: flex;
+  }
+
+  .formPanel {
+    width: 50%;
+  }
+
+  .mobileLogo {
+    display: none;
+  }
+}

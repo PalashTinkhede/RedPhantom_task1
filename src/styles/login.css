@@ -1,0 +1,43 @@
+/* =========================================================
+   Login Page CSS Variables (namespaced to avoid conflicts)
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Login-specific tokens */
+  --login-bg-main: #0f172a;
+  --login-bg-card: rgba(30, 41, 59, 0.7);
+  --login-bg-input: #1e293b;
+  --login-bg-input-focus: #334155;
+  --login-text-main: #f8fafc;
+  --login-text-muted: #94a3b8;
+  --login-brand-primary: #3b82f6;
+  --login-brand-hover: #2563eb;
+  --login-border-color: #334155;
+  --login-error-color: #ef4444;
+  --login-focus-ring: rgba(59, 130, 246, 0.5);
+
+  /* Login spacing */
+  --login-spacing-1: 4px;
+  --login-spacing-2: 8px;
+  --login-spacing-3: 12px;
+  --login-spacing-4: 16px;
+  --login-spacing-5: 20px;
+  --login-spacing-6: 24px;
+  --login-spacing-8: 32px;
+  --login-spacing-12: 48px;
+
+  /* Login border radius */
+  --login-radius-sm: 4px;
+  --login-radius-md: 8px;
+  --login-radius-lg: 12px;
+  --login-radius-xl: 16px;
+
+  /* Login typography */
+  --login-font-sm: 13px;
+  --login-font-md: 14px;
+  --login-font-base: 16px;
+  --login-font-lg: 18px;
+  --login-font-xl: 24px;
+  --login-font-2xl: 28px;
+}

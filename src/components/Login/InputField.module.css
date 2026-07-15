@@ -1,0 +1,61 @@
+.fieldContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--login-spacing-2);
+  margin-bottom: var(--login-spacing-4);
+  text-align: left;
+}
+
+.label {
+  font-size: var(--login-font-sm);
+  font-weight: 500;
+  color: var(--login-text-muted);
+}
+
+.required {
+  color: var(--login-error-color);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: var(--login-bg-input);
+  border: 1px solid var(--login-border-color);
+  border-radius: var(--login-radius-md);
+  color: var(--login-text-main);
+  font-size: var(--login-font-base);
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.input::placeholder {
+  color: var(--login-text-muted);
+  opacity: 0.5;
+}
+
+.input:focus-visible {
+  border-color: var(--login-brand-primary);
+  box-shadow: 0 0 0 3px var(--login-focus-ring);
+  background-color: var(--login-bg-input-focus);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inputError {
+  border-color: var(--login-error-color);
+}
+
+.inputError:focus-visible {
+  border-color: var(--login-error-color);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.errorText {
+  font-size: 12px;
+  color: var(--login-error-color);
+  margin-top: 2px;
+}
