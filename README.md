@@ -55,10 +55,11 @@ Follow these steps to run the application locally:
 ### 1. Prerequisites
 Ensure you have [Node.js](https://nodejs.org/) (v18 or higher) installed on your machine.
 
-### 2. Clone/Navigate to the Directory
-If you haven't already, navigate to the project directory:
+### 2. Clone the repository
+If you haven't already, clone the repository:
 ```bash
-cd d:/redphantom_task1/Admin_Dashboard
+git clone https://github.com/PalashTinkhede/RedPhantom_task1
+cd RedPhantom_task1
 ```
 
 ### 3. Install Dependencies
