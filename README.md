@@ -2,6 +2,12 @@
 
 A modern, responsive, and fully-featured React Admin Dashboard merged with a sleek authentication flow. This project is built using React, Vite, React Router, and CSS Modules, featuring a dark-mode-first premium aesthetic with glassmorphism elements and smooth animations.
 
+## 📸 Screenshots
+
+| Login Page | Admin Dashboard |
+|:---:|:---:|
+| <img src="./public/login_page.png" alt="Login Page" width="400"/> | <img src="./public/admin_dashboard.png" alt="Admin Dashboard" width="400"/> |
+
 ---
 
 ## 🌟 Key Features
