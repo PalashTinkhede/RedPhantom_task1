@@ -16,7 +16,7 @@ export default function LoginPage() {
         <div className={styles.brandContent}>
           <div className={styles.logoWrapper}>
             <Hexagon size={48} className={styles.logoIcon} />
-            <span className={styles.logoText}>RedPhantom</span>
+            <span className={styles.logoText}>LOGIN</span>
           </div>
           <div className={styles.illustrationWrapper}>
             <div className={styles.glassCard}>
